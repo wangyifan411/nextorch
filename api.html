@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>API reference &mdash; nextorch 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/x_icon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="License" href="license.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> nextorch
+          
+
+          
+            
+            <img src="_static/nextorch_logo_1.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="includeme.html">NEXTorch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API reference</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">nextorch</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>API reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-nextorch.io">
+<span id="api-reference"></span><h1>API reference<a class="headerlink" href="#module-nextorch.io" title="Permalink to this headline">¶</a></h1>
+<p>nextorch.io</p>
+<p>Handles input and output files</p>
+<dl class="py function">
+<dt id="nextorch.io.np_to_dataframe">
+<code class="sig-prename descclassname">nextorch.io.</code><code class="sig-name descname">np_to_dataframe</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">X</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>Matrix<span class="p">, </span>list<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">var_names</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Union<span class="p">[</span>str<span class="p">, </span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">n</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">1</span></em><span class="sig-paren">)</span> &#x2192; pandas.DataFrame<a class="headerlink" href="#nextorch.io.np_to_dataframe" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a list numpy matrices to a single dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>X</strong> (<em>Union</em><em>[</em><em>Matrix</em><em>, </em><em>list</em><em>]</em>) – List numpy matrices or a single matrix</p></li>
+<li><p><strong>var_names</strong> (<em>Optional</em><em>[</em><em>Union</em><em>[</em><em>str</em><em>, </em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – Names of variables, by default None</p></li>
+<li><p><strong>n</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em><em>, </em><em>optional</em>) – number of rows in output dataframe, by default 1</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>data</strong> (<em>‘pandas.DataFrame’_</em>) – Output data</p></li>
+<li><p><strong>_</strong> (<em>‘pandas.DataFrame’: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nextorch.io.read_csv">
+<code class="sig-prename descclassname">nextorch.io.</code><code class="sig-name descname">read_csv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">var_names</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skiprows</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>list<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">index_col</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>pandas.DataFrame<span class="p">, </span>pandas.DataFrame<span class="p">]</span><a class="headerlink" href="#nextorch.io.read_csv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a csv file and returns the data in pandas Dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_path</strong> (<em>str</em>) – Path of the csv file</p></li>
+<li><p><strong>var_names</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – Names of variables to include, by default None,</p></li>
+<li><p><strong>skiprows</strong> (<em>Optional</em><em>[</em><em>list</em><em>]</em><em>, </em><em>optional</em>) – Rows to skip at the beginning (0-indexed)
+by default None, i.e. import all</p></li>
+<li><p><strong>index_col</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em><em>, </em><em>optional</em>) – Column (0-indexed) to use as the row labels of the DataFrame
+by default 0 assuming the indices are saved in the first column</p></li>
+<li><p><strong>verbose</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em><em>, </em><em>optional</em>) – Flag whether to output print statements, by default True</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>data</strong> (<em>‘pandas.DataFrame’_</em>) – Input data</p></li>
+<li><p><strong>data_full</strong> (<em>‘pandas.DataFrame’_</em>) – Full data from the file</p></li>
+<li><p><strong>_</strong> (<em>‘pandas.DataFrame’: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nextorch.io.read_excel">
+<code class="sig-prename descclassname">nextorch.io.</code><code class="sig-name descname">read_excel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">sheet_name</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">var_names</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">skiprows</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>list<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">index_col</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>int<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>bool<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>pandas.DataFrame<span class="p">, </span>pandas.DataFrame<span class="p">]</span><a class="headerlink" href="#nextorch.io.read_excel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads an excel file and returns the data in pandas Dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_path</strong> (<em>str</em>) – Path of the excel spreedsheet</p></li>
+<li><p><strong>sheet_name</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – Name of the excel sheet, by default 0, i.e., the first sheet</p></li>
+<li><p><strong>var_names</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – Names of variables to include, by default None,</p></li>
+<li><p><strong>skiprows</strong> (<em>Optional</em><em>[</em><em>list</em><em>]</em><em>, </em><em>optional</em>) – Rows to skip at the beginning (0-indexed)
+by default None, i.e. import all</p></li>
+<li><p><strong>index_col</strong> (<em>Optional</em><em>[</em><em>int</em><em>]</em><em>, </em><em>optional</em>) – Column (0-indexed) to use as the row labels of the DataFrame
+by default 0 assuming the indices are saved in the first column</p></li>
+<li><p><strong>verbose</strong> (<em>Optional</em><em>[</em><em>bool</em><em>]</em><em>, </em><em>optional</em>) – Flag whether to output print statements, by default True</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>data</strong> (<em>‘pandas.DataFrame’_</em>) – Input data</p></li>
+<li><p><strong>data_full</strong> (<em>‘pandas.DataFrame’_</em>) – Full data from the file</p></li>
+<li><p><strong>_</strong> (<em>‘pandas.DataFrame’: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="nextorch.io.split_X_y">
+<code class="sig-prename descclassname">nextorch.io.</code><code class="sig-name descname">split_X_y</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span><span class="p">:</span> <span class="n">pandas.DataFrame</span></em>, <em class="sig-param"><span class="n">Y_names</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">X_names</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Tuple<span class="p">[</span>Matrix<span class="p">, </span>Matrix<span class="p">, </span>List<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>List<span class="p">[</span>str<span class="p">]</span><span class="p">]</span><a class="headerlink" href="#nextorch.io.split_X_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Splits the data into independent (X)
+and dependent (y) varibles</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>'pandas.DataFrame'_</em>) – Input dataframe</p></li>
+<li><p><strong>Y_names</strong> (<em>Union</em><em>[</em><em>str</em><em>, </em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – Name(s) of dependent variables, can be a single str or list of str</p></li>
+<li><p><strong>X_names</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – Names of independent variables, by default None, i.e. select all</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>X</strong> (<em>Matrix</em>) – Independent variable matrix</p></li>
+<li><p><strong>Y</strong> (<em>Matrix</em>) – Dependent variable matrix</p></li>
+<li><p><strong>X_names</strong> (<em>List[str]</em>) – Independent variables names</p></li>
+<li><p><strong>Y_names</strong> (<em>List[str]</em>) – Dependent variable matrix</p></li>
+<li><p><strong>_</strong> (<em>‘pandas.DataFrame’: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html</em>)</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="license.html" class="btn btn-neutral float-left" title="License" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Vlachos Research Group.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
